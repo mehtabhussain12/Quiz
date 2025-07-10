@@ -4,35 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+    <title>Quiz page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container">
-    <div class="header">
-        <div class="logo">E.games</div>
-        <div class="nav">
-            <ul>
-                <li>Home</li>
-                <li>About us </li>
-                <li>Contact us</li>
-            </ul>
-        </div>
-        
-        <!-- <div class="Quiz">
-   
-</div> -->
-         </div>
-         <div class="hero">
-             <button class="btn"><a href="quiz.html">Quiz</a></button>
-         </div>
 
-   
-</div>
+        <div class="container">
+            <div class="nav">
+                <!-- <p>Name</p> -->
+                <h1>Quiz App</h1>
+                <!-- <p>Date</p> -->
+            </div>
+            <div class="question-number score-display">
+                <span>
+                    Question <span id="current"></span> of <span id="total" class="">10</span>
+                </span>
+                <div class="score-display">
+                    <p id="score">Score: 0</p>
+                </div>
+            </div>
+
+
+            <div class="quiz-container " id="quiz-container">
+                <div class="questions">
+                    <p id="questions"></p>
+                </div>
+                <div class="options">
+                    <div id="options"></div>
+                </div>
+            </div>
+            <div class="result" id="result">
+
+            </div>
+
+            <button onclick="Reset()" class="nextbtn" id="resetbtn">Reset</button>
+            <button onclick="NextQuestion()" class="nextbtn" id="nextbtn">Next</button>
+        </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
