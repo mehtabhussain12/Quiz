@@ -11,54 +11,54 @@ let Questions = [
         option: ["Himalayas", "Karakoram", "Hindu Kush", "All of these"],
         correctanswer: "All of these"
     },
-    // {
-    //     id: 3,
-    //     Question: "Pakistan's national language is?",
-    //     option: ["Punjabi", "Urdu", "Sindhi", "English"],
-    //     correctanswer: "Urdu"
-    // },
-    // {
-    //     id: 4,
-    //     Question: "When did Pakistan win its first Olympic gold medal?",
-    //     option: ["1960", "1964", "1968", "1972"],
-    //     correctanswer: "1960"
-    // },
-    // {
-    //     id: 5,
-    //     Question: "The Lahore Resolution was passed in which year?",
-    //     option: ["1940", "1947", "1935", "1956"],
-    //     correctanswer: "1940"
-    // },
-    // {
-    //     id: 6,
-    //     Question: "Which is the largest province of Pakistan by area?",
-    //     option: ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"],
-    //     correctanswer: "Balochistan"
-    // },
-    // {
-    //     id: 7,
-    //     Question: "Pakistan's national flower is?",
-    //     option: ["Rose", "Jasmine", "Tulip", "Sunflower"],
-    //     correctanswer: "Jasmine"
-    // },
-    // {
-    //     id: 8,
-    //     Question: "The K2 mountain is located in which range?",
-    //     option: ["Himalayas", "Karakoram", "Hindu Kush", "Pamir"],
-    //     correctanswer: "Karakoram"
-    // },
-    // {
-    //     id: 9,
-    //     Question: "Which river is known as the lifeline of Pakistan?",
-    //     option: ["Jhelum", "Chenab", "Indus", "Ravi"],
-    //     correctanswer: "Indus"
-    // },
-    // {
-    //     id: 10,
-    //     Question: "Pakistan's first Governor-General was?",
-    //     option: ["Liaquat Ali Khan", "Quaid-e-Azam", "Ayub Khan", "Iskander Mirza"],
-    //     correctanswer: "Quaid-e-Azam"
-    // },
+    {
+        id: 3,
+        Question: "Pakistan's national language is?",
+        option: ["Punjabi", "Urdu", "Sindhi", "English"],
+        correctanswer: "Urdu"
+    },
+    {
+        id: 4,
+        Question: "When did Pakistan win its first Olympic gold medal?",
+        option: ["1960", "1964", "1968", "1972"],
+        correctanswer: "1960"
+    },
+    {
+        id: 5,
+        Question: "The Lahore Resolution was passed in which year?",
+        option: ["1940", "1947", "1935", "1956"],
+        correctanswer: "1940"
+    },
+    {
+        id: 6,
+        Question: "Which is the largest province of Pakistan by area?",
+        option: ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"],
+        correctanswer: "Balochistan"
+    },
+    {
+        id: 7,
+        Question: "Pakistan's national flower is?",
+        option: ["Rose", "Jasmine", "Tulip", "Sunflower"],
+        correctanswer: "Jasmine"
+    },
+    {
+        id: 8,
+        Question: "The K2 mountain is located in which range?",
+        option: ["Himalayas", "Karakoram", "Hindu Kush", "Pamir"],
+        correctanswer: "Karakoram"
+    },
+    {
+        id: 9,
+        Question: "Which river is known as the lifeline of Pakistan?",
+        option: ["Jhelum", "Chenab", "Indus", "Ravi"],
+        correctanswer: "Indus"
+    },
+    {
+        id: 10,
+        Question: "Pakistan's first Governor-General was?",
+        option: ["Liaquat Ali Khan", "Quaid-e-Azam", "Ayub Khan", "Iskander Mirza"],
+        correctanswer: "Quaid-e-Azam"
+    },
 ];
 let currentQuestion = 0
 let score = 0
