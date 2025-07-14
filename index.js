@@ -60,6 +60,7 @@ let Questions = [
         correctanswer: "Quaid-e-Azam"
     },
 ];
+// let Questions = [];
 let currentQuestion = 0
 let score = 0
 let current = document.getElementById('current')
@@ -70,19 +71,53 @@ let optionElement = document.getElementById("options")
 let questionsElement = document.getElementById("questions")
 let quizContainer = document.getElementById("quiz-container")
 let resultcontainer = document.getElementById("result")
+let mesg = document.getElementById("mesg")
+let plyerInfo = document.getElementById("plyerinfo")
 resetbtn.style.display = "none"
+quizContainer.style.display = "none"
+nextbtn.style.display = "none"
+mesg.style.display = "none"
+
+//   function getData() {
+// fetch("https://the-trivia-api.com/v2/questions").then(res => res.json()).then((res) => {
+//         Questions = res
+//     })
+   
+// }
+
+// getData();
+function showPlayerName() {
+
+//   console.log(Questions[currentQuestion].question.text)
+    let playerName = document.getElementById("plyer").value
+    let name = document.getElementById("name")
+    name.innerText = `Welcome ${playerName.toUpperCase()}  `
+    if (playerName == "") {
+        mesg.style.display = "block"
+
+    }
+    else {
+        quizContainer.style.display = "block"
+        plyerInfo.style.display = "none"
+        nextbtn.style.display = "block"
+    }
+
+    console.log(playerName)
+}
 function showQuestions() {
     nextbtn.disabled = true
     current.innerText = currentQuestion +1
+// console.log(Questions[currentQuestion].Question)
 
-    questionsElement.innerHTML = Questions[currentQuestion].Question
 
-    optionElement.innerHTML = '';
+   questionsElement.innerHTML = Questions[currentQuestion].Question
+       optionElement.innerHTML = '';
     Questions[currentQuestion].option.map((element) => {
         optionElement.innerHTML += `<button onclick="checkAnswer(event)" class="option-btn" id="selctBtn">${element}</button>`
     })
     result.innerText = `Score: ${score}`;
-} showQuestions();
+} 
+showQuestions();
 
 function checkAnswer(event) {
 
@@ -109,15 +144,15 @@ function checkAnswer(event) {
 
 
 function NextQuestion() {
-    if (currentQuestion +1 >= Questions.length) {
+    if (currentQuestion + 1 >= Questions.length) {
         nextbtn.disabled = true;
         nextbtn.style.display = "none"
         resetbtn.style.display = "block"
         quizContainer.style.display = "none"
-        resultcontainer.style.display="block"
+        resultcontainer.style.display = "block"
         resultcontainer.innerHTML =
             `<h2>Quiz Completed!</h2><p>Your final score is ${score}/${Questions.length}</p>`;
-        return; 
+        return;
     }
 
     currentQuestion++;
@@ -125,15 +160,13 @@ function NextQuestion() {
 }
 
 function Reset() {
-     currentQuestion = 0
+    currentQuestion = 0
     showQuestions()
     resultcontainer.style.display = "none"
     quizContainer.style.display = "block"
-   
     score = 0
-    
     nextbtn.style.display = "block"
     nextbtn.disabled = false
     resetbtn.style.display = "none"
-   
+
 }

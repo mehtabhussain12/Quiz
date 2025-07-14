@@ -10,12 +10,20 @@
 
 <body>
 
-        <div class="container">
-            <div class="nav">
-                <!-- <p>Name</p> -->
-                <h1>Quiz App</h1>
-                <!-- <p>Date</p> -->
-            </div>
+    <div class="container">
+        <div class="nav">
+            <!-- <p>Name</p> -->
+            <h1 id="name">Quiz App</h1>
+            <!-- <p>Date</p> -->
+        </div>
+
+        <div class="plyer-info" id="plyerinfo">
+            <input id="plyer" type="text" placeholder="Enter your name">
+            <p id="mesg">Type your name </p>
+            <button class="nextbtn" onclick="showPlayerName()">Start Quiz</button>
+        </div>
+
+        <div class="quiz-container " id="quiz-container">
             <div class="question-number score-display">
                 <span>
                     Question <span id="current"></span> of <span id="total" class="">10</span>
@@ -24,23 +32,20 @@
                     <p id="score">Score: 0</p>
                 </div>
             </div>
-
-
-            <div class="quiz-container " id="quiz-container">
-                <div class="questions">
-                    <p id="questions"></p>
-                </div>
-                <div class="options">
-                    <div id="options"></div>
-                </div>
+            <div class="questions">
+                <p id="questions"></p>
             </div>
-            <div class="result" id="result">
-
+            <div class="options">
+                <div id="options"></div>
             </div>
-
-            <button onclick="Reset()" class="nextbtn" id="resetbtn">Reset</button>
-            <button onclick="NextQuestion()" class="nextbtn" id="nextbtn">Next</button>
         </div>
+        <div class="result" id="result">
+
+        </div>
+
+        <button onclick="Reset()" class="nextbtn" id="resetbtn">Reset</button>
+        <button onclick="NextQuestion()" class="nextbtn" id="nextbtn">Next</button>
+    </div>
 
     <script src="index.js"></script>
 </body>
